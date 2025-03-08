@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线德州扑克</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>在线德州扑克</h1>
+        
+        <div class="game-info">
+            <div class="pot">底池: <span id="pot-amount">0</span></div>
+            <div class="current-stage">当前阶段: <span id="current-stage">等待玩家加入</span></div>
+        </div>
+        
+        <div class="player-list">
+            <h2>玩家列表</h2>
+            <ul id="players">
+                <!-- 玩家将通过JavaScript动态添加 -->
+            </ul>
+        </div>
+        
+        <div class="game-board">
+            <div class="community-cards">
+                <!-- 公共牌将通过JavaScript动态添加 -->
+            </div>
+            
+            <div class="player-hand">
+                <h3>你的手牌</h3>
+                <div class="cards" id="player-hand">
+                    <!-- 玩家手牌将通过JavaScript动态添加 -->
+                </div>
+                <div class="chips">你的筹码: <span id="player-chips">0</span></div>
+            </div>
+            
+            <div class="actions">
+                <button id="bet-button" disabled>下注</button>
+                <input type="number" id="bet-amount" placeholder="下注金额" disabled>
+                <button id="fold-button" disabled>弃牌</button>
+                <button id="start-game" disabled>开始游戏</button>
+            </div>
+        </div>
+        
+        <div class="chat">
+            <h3>聊天</h3>
+            <div class="chat-messages" id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="输入消息...">
+            <button id="send-message">发送</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
